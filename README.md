@@ -4,9 +4,13 @@ This is a very basic layered font icon utility that I extracted from another pro
 
 ![Screenshot](./.github/images/screenshot-2023-01-29.png)
 
+Another example, in light and dark themes:
+
+![Screenshot](./.github/images/themes.png)
+
 To see how to use, please check java and scala demos, and documentation comments in the [core/.../Layer.scala](./core/src/main/scala/io/github/mimoguz/layeredfonticon/Layer.scala) file.
 
-The 'basic' project offers Java Swing support without any other dependencies. The 'flat' project adds a little bit better support for the magnificent [FlatLaf](https://www.formdev.com/flatlaf/) look and feel.
+The 'basic' project offers Java Swing support without any other dependencies. The 'flat' project adds a little better support for the magnificent [FlatLaf](https://www.formdev.com/flatlaf/) look and feel.
 
 ## Building
 
