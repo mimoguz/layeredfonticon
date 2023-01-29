@@ -4,7 +4,7 @@ This is a very basic layered font icon utility that I extracted from another pro
 
 ![Screenshot](./.github/images/screenshot-2023-01-29.png)
 
-Another example, in light and dark themes:
+Another example that shows how "unset" colors change with the current laf:
 
 ![Screenshot](./.github/images/themes.png)
 
