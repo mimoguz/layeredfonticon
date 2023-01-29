@@ -14,4 +14,4 @@ You will need JDK 11+ and [sbt](https://www.scala-sbt.org/index.html). Then, run
 
     sbt publishLocal
 
-will publish the artefacts to your local ivy repository and list what's published.
+in the project root will publish the artefacts to your local ivy repository and list what's published.
