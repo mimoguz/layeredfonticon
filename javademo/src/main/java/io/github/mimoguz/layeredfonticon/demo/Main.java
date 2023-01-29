@@ -1,6 +1,7 @@
 package io.github.mimoguz.layeredfonticon.demo;
 
-import javax.swing.*;
+import javax.swing.UIManager;
+import javax.swing.SwingUtilities;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,9 +10,7 @@ public class Main {
         } catch (Exception e) {
             // pass
         }
-        SwingUtilities.invokeLater(() -> {
-            new Frame().setVisible(true);
-        });
+        SwingUtilities.invokeLater(() -> new Frame().setVisible(true));
     }
 }
 
