@@ -27,7 +27,7 @@ public class Frame extends JFrame {
                 makeButton(
                         Layer.of(Symbol.BORDER.text()),
                         Layer.of(Symbol.TOP.text(), Color.GREEN),
-                        Layer.of(Symbol.TOP.text(), Color.RED)
+                        Layer.ofKey(Symbol.TOP.text(), "Theme.red")
                 )
         );
         contents.add(
@@ -41,11 +41,12 @@ public class Frame extends JFrame {
         final var toggle = makeToggleButton(
                 Layer.of(Symbol.BORDER.text()),
                 Layer.of(Symbol.TOP.text(), Color.BLUE),
-                Layer.of(Symbol.BOTTOM.text(), Color.RED, true)
+                Layer.ofKey(Symbol.BOTTOM.text(), "Theme.red", true)
         );
         toggle.setForeground(Color.MAGENTA);
         contents.add(toggle);
 
+        UIManager.put("Theme.red", Color.RED);
         setContentPane(contents);
         pack();
         setSize(300, 200);

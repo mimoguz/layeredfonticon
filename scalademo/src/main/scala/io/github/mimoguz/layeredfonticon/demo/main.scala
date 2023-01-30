@@ -1,9 +1,9 @@
 package io.github.mimoguz.layeredfonticon.demo
 
-import io.github.mimoguz.layeredfonticon.{Layer, LayeredFontIcon}
+import io.github.mimoguz.layeredfonticon.{Layer, LayeredFontIcon, LayerColor}
 
 import java.awt.{Color, Font, GridLayout}
-import javax.swing.{JButton, JFrame, JPanel, JToggleButton, SwingUtilities, UIManager, WindowConstants}
+import javax.swing.*
 import scala.util.Try
 
 @main def main(): Unit = SwingUtilities.invokeLater { () =>
@@ -20,22 +20,22 @@ object Frame extends JFrame():
       add(
         makeButton(
           Layer(Symbol.Border.text),
-          Layer(Symbol.Top.text, Option(Color.BLUE)),
-          Layer(Symbol.Bottom.text, Option(Color.RED)),
+          Layer(Symbol.Top.text, LayerColor.Set(Color.BLUE)),
+          Layer(Symbol.Bottom.text, LayerColor.FromKey("Theme.red")),
         ),
       )
       add(
         makeToggleButton(
           Layer(Symbol.Border.text),
-          Layer(Symbol.Top.text, Option(Color.BLUE), xOffset = -2, yOffset = 4),
-          Layer(Symbol.Bottom.text, Option(Color.RED), xOffset = 2, yOffset = -4),
+          Layer(Symbol.Top.text, LayerColor.Set(Color.BLUE), xOffset = -2, yOffset = 4),
+          Layer(Symbol.Bottom.text, LayerColor.FromKey("Theme.red"), xOffset = 2, yOffset = -4),
         ),
       )
       add({
         val toggle = makeToggleButton(
           Layer(Symbol.Border.text),
-          Layer(Symbol.Top.text, Option(Color.BLUE)),
-          Layer(Symbol.Bottom.text, Option(Color.RED), forceColor = true),
+          Layer(Symbol.Top.text, LayerColor.Set(Color.BLUE)),
+          Layer(Symbol.Bottom.text, LayerColor.FromKey("Theme.red"), forceColor = true),
         )
         toggle.setForeground(Color.MAGENTA)
         toggle
@@ -43,6 +43,7 @@ object Frame extends JFrame():
     end new
   end contents
 
+  UIManager.put("Theme.red", Color.RED)
   setContentPane(contents)
   pack()
   setSize(300, 200)

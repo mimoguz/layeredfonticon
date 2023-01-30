@@ -36,7 +36,7 @@ object LayeredFontIconFL:
   def apply(
       font: Font,
       symbol: String,
-      color: Option[Color] = None,
+      color: LayerColor = LayerColor.Unset,
       forceColor: Boolean = false,
       xOffset: Float = 0f,
       yOffset: Float = 0f,

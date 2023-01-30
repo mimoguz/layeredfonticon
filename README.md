@@ -4,9 +4,36 @@ This is a very basic layered font icon utility that I extracted from another pro
 
 ![Screenshot](./.github/images/screenshot-2023-01-29.png)
 
-Another example that shows how "unset" colors change with the current laf:
+Another example that shows how "unset" colors change with the foreground color:
 
 ![Screenshot](./.github/images/themes.png)
+
+Layers can also take their colors from the UIManager, using a key. This is especially useful when using FlatLaf, which lets
+you define such key-value pairs in the properties files. For example, let's assume we have two themes, light and dark.
+
+In DarkTheme.properties:
+
+    Theme.accent = #33A1FD
+
+In LightTheme.properties:
+
+    Theme.accent = #DF2935
+
+We can now use "Theme.accent" to lookup colors.
+
+Scala:
+
+```scala
+Layer(Symbol.CutAccent.text, LayerColor.FromKey("Theme.accent"))
+```
+
+Java:
+
+```java
+Layer.ofKey(Symbol.CUT_ACCENT.text(), "Theme.accent")
+```
+
+![Screenshot](./.github/images/accent.png)
 
 To see how to use, please check java and scala demos, and documentation comments in the [core/.../Layer.scala](./core/src/main/scala/io/github/mimoguz/layeredfonticon/Layer.scala) file.
 
@@ -42,12 +69,12 @@ In pom.xml, add
     <dependency>
         <groupId>io.github.mimoguz</groupId>
         <artifactId>layeredfonticon-core_3</artifactId>
-        <version>0.1.0</version>
+        <version>0.2.0</version>
     </dependency>
     <dependency>
         <groupId>io.github.mimoguz</groupId>
         <artifactId>layeredfonticon-basic_3</artifactId>
-        <version>0.1.0</version>
+        <version>0.2.0</version>
     </dependency>
 </dependencies>
 ```
@@ -59,12 +86,12 @@ to use the basic version, or
     <dependency>
         <groupId>io.github.mimoguz</groupId>
         <artifactId>layeredfonticon-core_3</artifactId>
-        <version>0.1.0</version>
+        <version>0.2.0</version>
     </dependency>
     <dependency>
         <groupId>io.github.mimoguz</groupId>
         <artifactId>layeredfonticon-flat_3</artifactId>
-        <version>0.1.0</version>
+        <version>0.2.0</version>
     </dependency>
 </dependencies>
 ```
@@ -77,8 +104,8 @@ In build.sbt, add
 
 ```scala
 libraryDependencies ++= Seq(
-  "io.github.mimoguz" %% "layeredfonticon-core" % "0.1.0",
-  "io.github.mimoguz" %% "layeredfonticon-basic" % "0.1.0"
+  "io.github.mimoguz" %% "layeredfonticon-core" % "0.2.0",
+  "io.github.mimoguz" %% "layeredfonticon-basic" % "0.2.0"
 )
 ```
 
@@ -86,8 +113,8 @@ to use the basic version, or
 
 ```scala
 libraryDependencies ++= Seq(
-  "io.github.mimoguz" %% "layeredfonticon-core" % "0.1.0",
-  "io.github.mimoguz" %% "layeredfonticon-flat" % "0.1.0"
+  "io.github.mimoguz" %% "layeredfonticon-core" % "0.2.0",
+  "io.github.mimoguz" %% "layeredfonticon-flat" % "0.2.0"
 )
 ```
 
