@@ -54,7 +54,7 @@ instead. If you just want jars, run
 
     sbt package
 
-and check target/scala-3.2.1 directory.
+and check the  "target/scala-3.2.1" directory.
 
 ## Basic usage
 
