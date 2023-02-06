@@ -10,7 +10,7 @@ import javax.swing.UIManager
   * @param symbol
   *   The string that will be used to draw this layer.
   * @param color
-  *   Optional color. If None, the foreground color will be used.
+  *   Optional color. If "Unset", the foreground color will be used.
   * @param forceColor
   *   Force color for __not selected__ toggle buttons or tabs. If false (default), the foreground color will be used.
   * @param xOffset
