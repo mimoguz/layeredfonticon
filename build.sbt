@@ -5,8 +5,13 @@ ThisBuild / scalacOptions ++= Seq(
   "-new-syntax",
   "-Xfatal-warnings",
 )
+
+
 ThisBuild / organization := "io.github.mimoguz"
 ThisBuild / licenses += ("Apache-2.0", new URL("https://www.apache.org/licenses/LICENSE-2.0.txt"))
+
+ThisBuild / publishTo := sonatypePublishToBundle.value
+
 
 lazy val core = project
   .in(file("core"))
@@ -31,7 +36,7 @@ lazy val basic = project
   .aggregate(core)
   .settings(
     moduleName := "layeredfonticon-basic",
-    name := "basic",
+    name := "basic"
   )
 
 lazy val scalaDemo = project
@@ -56,4 +61,5 @@ lazy val root = project
   .aggregate(core, basic, flat)
   .settings(
     moduleName := "layeredfonticon-all",
+    publishArtifact := false,
   )
