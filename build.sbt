@@ -6,12 +6,11 @@ ThisBuild / scalacOptions ++= Seq(
   "-Xfatal-warnings",
 )
 
-
 ThisBuild / organization := "io.github.mimoguz"
 ThisBuild / licenses += ("Apache-2.0", new URL("https://www.apache.org/licenses/LICENSE-2.0.txt"))
 
 ThisBuild / publishTo := sonatypePublishToBundle.value
-
+ThisBuild / sonatypeCredentialHost := "s01.oss.sonatype.org"
 
 lazy val core = project
   .in(file("core"))
