@@ -2,7 +2,7 @@
 
 [![Latest Version](https://img.shields.io/maven-central/v/io.github.mimoguz/layeredfonticon-core_3)](https://search.maven.org/search?q=layeredfonticon&g:io.github.mimoguz=)
 
-This is a very basic layered font icon utility that I extracted from another project of mine, for Java 11+ and Scala 3. It lets you use your own font icons in Swing applications, optionally with multiple layers in one icon. Below screenshot shows several examples using the same three layers.
+This is a very basic multi-layer font icon utility that I extracted from another project of mine, for Java 11+ and Scala 3. It lets you use your own font icons in Swing applications, optionally with multiple layers in one icon. Below screenshot shows several examples using the same three layers.
 
 ![Screenshot](./.github/images/screenshot-2023-01-29.png)
 
