@@ -1,5 +1,7 @@
 # Layered Font Icon Support For Java Swing / FlatLaf
 
+[![Latest Version](https://img.shields.io/maven-central/v/io.github.mimoguz/layeredfonticon-core_3)](https://search.maven.org/search?q=layeredfonticon&g:io.github.mimoguz=)
+
 This is a very basic layered font icon utility that I extracted from another project of mine, for Java 11+ and Scala 3. It lets you use your own font icons in Swing applications, optionally with multiple layers in one icon. Below screenshot shows several examples using the same three layers.
 
 ![Screenshot](./.github/images/screenshot-2023-01-29.png)
@@ -39,26 +41,7 @@ To see how to use, please check Java and Scala demos, and documentation comments
 
 The 'basic' project offers Java Swing support without any other dependencies. The 'flat' project adds a little better support for the magnificent [FlatLaf](https://www.formdev.com/flatlaf/) look and feel.
 
-## Building
-
-You will need JDK 11+ and [sbt](https://www.scala-sbt.org/index.html). Then, running
-
-    sbt publishLocal
-
-in the project root will publish the artefacts to your local ivy repository and list what's published. 
-To publish to default Maven repository at ~/.m2, run
-
-    sbt publishM2
-
-instead. If you just want jars, run
-
-    sbt package
-
-and check the  "target/scala-3.2.1" directory.
-
 ## Basic usage
-
-After publishing to your local repository, you can add it to project dependencies:
 
 ### Maven
 
@@ -119,3 +102,20 @@ libraryDependencies ++= Seq(
 ```
 
 to use FlatLaf specific version.
+
+## Building
+
+You will need JDK 11+ and [sbt](https://www.scala-sbt.org/index.html). Then, running
+
+    sbt publishLocal
+
+in the project root will publish the artefacts to your local ivy repository and list what's published. 
+To publish to default Maven repository at ~/.m2, run
+
+    sbt publishM2
+
+instead. If you just want jars, run
+
+    sbt package
+
+and check the  "target/scala-3.2.1" directory.
