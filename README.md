@@ -37,6 +37,10 @@ Layer.ofKey(Symbol.CUT_ACCENT.text(), "Theme.accent")
 
 ![Screenshot](./.github/images/accent.png)
 
+Animated theme change in FlatLaf:
+
+![Animated transition with FlatLaf](./.github/images/transition.gif)
+
 To see how to use, please check Java and Scala demos, and documentation comments in the [core/.../Layer.scala](./core/src/main/scala/io/github/mimoguz/layeredfonticon/Layer.scala) file.
 
 The 'basic' project offers Java Swing support without any other dependencies. The 'flat' project adds a little better support for the magnificent [FlatLaf](https://www.formdev.com/flatlaf/) look and feel.
