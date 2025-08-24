@@ -33,11 +33,6 @@
             </plugin>
             <plugin>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <configuration>
-                    <excludePackageNames>
-                        io.github.mimoguz.layeredfonticon.demo;io.github.mimoguz.layeredfonticon.flatdemo
-                    </excludePackageNames>
-                </configuration>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
