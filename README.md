@@ -41,8 +41,9 @@ To see how to use, please check the demos, and documentation comments in the
 
 * [Layer.java](./src/layeredfonticon/src/main/java/io/github/mimoguz/layeredfonticon/Layer.java),
 * [LayerColor.java](./src/layeredfonticon/src/main/java/io/github/mimoguz/layeredfonticon/LayerColor.java),
-* [LayerColors.java](./src/layeredfonticon/src/main/java/io/github/mimoguz/layeredfonticon/LayerColors.java), and
-* [LayeredFontIcon.java](./src/layeredfonticon/src/main/java/io/github/mimoguz/layeredfonticon/LayeredFontIcon.java)
+* [LayerColors.java](./src/layeredfonticon/src/main/java/io/github/mimoguz/layeredfonticon/LayerColors.java),
+* [LayeredFontIcon.java](./src/layeredfonticon/src/main/java/io/github/mimoguz/layeredfonticon/LayeredFontIcon.java), and
+* [LayeredFontIconFlat.java](./src/layeredfonticon-flat/src/main/java/io/github/mimoguz/layeredfonticon/flat/LayeredFontIconFlat.java)
 
 files.
 
