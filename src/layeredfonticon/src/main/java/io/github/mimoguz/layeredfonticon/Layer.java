@@ -51,7 +51,7 @@ public record Layer(String symbol, LayerColor color, boolean forceColor, int xOf
      * @return The new layer.
      */
     public static Layer of(String symbol, String colorKey, boolean forceColor) {
-        return new Layer(symbol, new LayerColor.FromKey(colorKey), forceColor, 0, 0); // new Layer(symbol, new LayerColor.Set(color), forceColor, 0, 0);
+        return new Layer(symbol, new LayerColor.FromKey(colorKey), forceColor, 0, 0);
     }
 
     /**
