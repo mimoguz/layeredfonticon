@@ -15,7 +15,21 @@ import java.awt.Color;
 public record Layer(String symbol, LayerColor color, boolean forceColor, int xOffset, int yOffset) {
 
     /**
-     * A  factory method to create a layer.
+     * A factory method to create a layer.
+     * Functionally equivalent to the record constructor, provided for consistency.
+     *
+     * @param symbol     The string that will be used to draw this layer.
+     * @param color      Layer color.
+     * @param forceColor Force color for <em>not selected</em> toggle buttons or tabs.
+     *                   If false, the foreground color will be used.
+     * @return Layer
+     */
+    public static Layer of(String symbol, Color color, boolean forceColor, int xOffset, int yOffset) {
+        return new Layer(symbol, new LayerColor.Set(color), forceColor, xOffset, yOffset);
+    }
+
+    /**
+     * A factory method to create a layer.
      *
      * @param symbol     The string that will be used to draw this layer.
      * @param color      Layer color.
