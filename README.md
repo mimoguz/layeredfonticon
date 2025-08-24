@@ -39,10 +39,10 @@ Animated theme change in FlatLaf:
 
 To see how to use, please check the demos, and documentation comments in the 
 
-* [Layer.java](./src/main/java/io/github/mimoguz/layeredfontincon/Layer.java),
-* [LayerColor.java](./src/main/java/io/github/mimoguz/layeredfontincon/LayerColor.java),
-* [LayerColors.java](./src/main/java/io/github/mimoguz/layeredfontincon/LayerColors.java), and
-* [LayeredFontIcon.java](./src/main/java/io/github/mimoguz/layeredfontincon/LayeredFontIcon.java)
+* [Layer.java](./src/layeredfonticon/src/main/java/io/github/mimoguz/layeredfonticon/Layer.java),
+* [LayerColor.java](./src/layeredfonticon/src/main/java/io/github/mimoguz/layeredfonticon/LayerColor.java),
+* [LayerColors.java](./src/layeredfonticon/src/main/java/io/github/mimoguz/layeredfonticon/LayerColors.java), and
+* [LayeredFontIcon.java](./src/layeredfonticon/src/main/java/io/github/mimoguz/layeredfonticon/LayeredFontIcon.java)
 
 files.
 
