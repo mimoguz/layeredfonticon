@@ -1,5 +1,7 @@
 # Layered Font Icon Support For Java Swing / FlatLaf
 
+__TODO: Update for the pure Java version.__
+
 [![Latest Version](https://img.shields.io/maven-central/v/io.github.mimoguz/layeredfonticon-core_3)](https://central.sonatype.com/search?smo=true&q=layeredfonticon&namespace=io.github.mimoguz)
 
 This is a very basic multi-layer font icon utility that I extracted from another project of mine, for Java 11+ and Scala 3. It lets you use your own font icons in Swing applications, optionally with multiple layers in one icon. Below screenshot shows several examples using the same three layers.
