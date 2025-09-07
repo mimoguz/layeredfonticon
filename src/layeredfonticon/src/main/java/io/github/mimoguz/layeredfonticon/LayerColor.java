@@ -1,5 +1,7 @@
 package io.github.mimoguz.layeredfonticon;
 
+import org.jspecify.annotations.Nullable;
+
 import javax.swing.UIManager;
 import java.awt.Color;
 import java.util.function.Supplier;
@@ -80,6 +82,33 @@ public sealed interface LayerColor {
             return def.get();
         }
 
+    }
+
+    /**
+     * Convenience method to create a {@link LayerColor.Set} instance from possibly null color.
+     *
+     * @param color The color of the layer.
+     * @return A LayerColor.Set instance if the color is not null, or LayerColor.Unset if it is.
+     */
+    static LayerColor ofColor(@Nullable Color color) {
+        return color == null ? LayerColor.Unset.instance() : new LayerColor.Set(color);
+    }
+
+    /**
+     * Convenience method to create a {@link LayerColor.FromKey} instance from possibly null key.
+     *
+     * @param key The key value for lookup.
+     * @return A LayerColor.FromKey instance if the key is not null, or LayerColor.Unset if it is.
+     */
+    static LayerColor ofKey(@Nullable String key) {
+        return key == null ? LayerColor.Unset.instance() : new LayerColor.FromKey(key);
+    }
+
+    /**
+     * Convenience method to get {@link LayerColor.FromKey} instance.
+     */
+    static LayerColor unset() {
+        return LayerColor.Unset.instance();
     }
 
 }

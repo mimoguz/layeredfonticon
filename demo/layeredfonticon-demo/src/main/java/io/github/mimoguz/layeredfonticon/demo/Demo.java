@@ -52,7 +52,7 @@ public class Demo extends JFrame {
                 iconFont,
                 Layer.of(Symbol.BORDER.value()),
                 new Layer(Symbol.TOP.value(), new LayerColor.Set(Color.GREEN), false, -6, 8),
-                new Layer(Symbol.BOTTOM.value(), LayerColor.Unset.instance(), false, 6, -8)
+                new Layer(Symbol.BOTTOM.value(), LayerColor.unset(), false, 6, -8)
             ))
         );
 

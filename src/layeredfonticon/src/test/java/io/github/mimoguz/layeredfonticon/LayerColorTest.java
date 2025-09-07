@@ -13,8 +13,8 @@ public class LayerColorTest {
         UIManager.put("blue", Color.BLUE);
         UIManager.put("green", Color.GREEN);
         final var blue = new LayerColor.FromKey("blue");
-        final var green = LayerColors.ofKey("green");
-        final var yellow = LayerColors.ofKey("yellow");
+        final var green = LayerColor.ofKey("green");
+        final var yellow = LayerColor.ofKey("yellow");
 
         Assertions.assertEquals(Color.BLUE, blue.getOrDefault(Color.RED));
         Assertions.assertEquals(Color.GREEN, green.getOrDefault(Color.RED));
