@@ -41,33 +41,33 @@ public class FlatDemo extends JFrame {
         final var contents = new JPanel(new GridLayout(2, 3, 4, 4));
 
         contents.add(
-            makeButton(
+            new JButton(LayeredFontIconFlat.of(
                 iconFont,
                 Layer.of(Symbol.BORDER.value()),
                 Layer.of(Symbol.TOP.value(), Color.GREEN),
                 Layer.of(Symbol.BOTTOM.value(), ACCENT_COLOR_KEY)
-            )
+            ))
         );
 
         contents.add(
-            makeToggleButton(
+            new JToggleButton(LayeredFontIconFlat.of(
                 iconFont,
                 Layer.of(Symbol.BORDER.value()),
                 new Layer(Symbol.TOP.value(), new LayerColor.Set(Color.GREEN), false, -6, 8),
                 new Layer(Symbol.BOTTOM.value(), LayerColor.Unset.instance(), false, 6, -8)
-            )
+            ))
         );
 
-        final var toggle = makeToggleButton(
+        final var toggle = new JToggleButton(LayeredFontIconFlat.of(
             iconFont,
             Layer.of(Symbol.BORDER.value()),
             Layer.of(Symbol.TOP.value(), Color.GREEN),
             Layer.of(Symbol.BOTTOM.value(), ACCENT_COLOR_KEY, true)
-        );
+        ));
         toggle.setForeground(Color.ORANGE);
         contents.add(toggle);
 
-        final var disabledButton = makeButton(iconFont, Symbol.BORDER);
+        final var disabledButton = new JButton(LayeredFontIconFlat.of(iconFont, Symbol.BORDER.value()));
         disabledButton.setEnabled(false);
         contents.add(disabledButton);
 
@@ -100,18 +100,6 @@ public class FlatDemo extends JFrame {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-    }
-
-    private static JButton makeButton(Font font, Symbol symbol) {
-        return new JButton(LayeredFontIconFlat.of(font, symbol.value()));
-    }
-
-    private JButton makeButton(Font font, Layer... layers) {
-        return new JButton(LayeredFontIconFlat.of(font, layers));
-    }
-
-    private JToggleButton makeToggleButton(Font font, Layer... layers) {
-        return new JToggleButton(LayeredFontIconFlat.of(font, layers));
     }
 
 }
