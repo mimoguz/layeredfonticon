@@ -20,6 +20,27 @@
     <name>layeredfonticon</name>
     <url>https://github.com/mimoguz/layeredfonticon</url>
 
+    <description>
+        A very basic layered icon font utility for Java Swing.
+    </description>
+
+    <developers>
+        <developer>
+            <id>mimoguz</id>
+            <name>Oguz Tas</name>
+            <email>mimoguz.publish@outlook.com</email>
+            <url>https://github.com/mimoguz</url>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache-2.0</name>
+            <url>https://opensource.org/license/apache-2-0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
     <modules>
         <module>layeredfonticon</module>
         <module>layeredfonticon-flat</module>
